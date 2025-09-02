@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        background: linear-gradient(135deg, #B3E5FC 0%, #E1F5FE 100%); /* lighter sky blue */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .about-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .about-container h1 {
+        margin-bottom: 10px;
+    }
+    .about-container .tagline {
+        font-style: italic;
+        margin-bottom: 30px;
+        text-align: center; /* centered tagline */
+        font-size: 1.2em;
+        color: #555;
+    }
+    .about-container h2 {
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+    .about-container p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+</style>
+
+<div class="about-container">
+    <h1>Travels</h1>
+    <p class="tagline">"Explore the world, one unforgettable journey at a time."</p>
+
+    <h2>Who We Are</h2>
+    <p>At Travels, we're passionate explorers dedicated to helping you discover the beauty and diversity of the world. Whether you're dreaming of ancient wonders, tropical escapes, or cultural adventures, our mission is to inspire and guide every step of your journey. With carefully curated insights, travel tips, and destination highlights, Travels makes exploring the globe easier, richer, and truly unforgettable.</p>
+
+    <p>At Travels, we believe that every journey has the power to transform. Our team is dedicated to bringing you the best destinations, tips, and inspiration to turn your travel dreams into reality. Whether you're a seasoned explorer or planning your first adventure, we're here to guide you every step of the way.</p>
+</div>
+{% endblock %}

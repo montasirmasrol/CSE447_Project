@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        background: linear-gradient(135deg, #e0f7ff 0%, #f0fcff 100%); /* light blue gradient */
+        font-family: Arial, sans-serif;
+    }
+    .index-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .carousel-inner img:first-child {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+    .card img {
+        height: 200px; /* uniform height for all cards */
+        object-fit: cover; /* preserve aspect ratio without stretching */
+        border-radius: 12px 12px 0 0;
+    }
+    .card {
+        border-radius: 12px;
+    }
+</style>
+
+<div class="index-container">
+
+    <!-- Carousel -->
+    <div class="container-fluid px-0">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+                    <img src="/static/img/a.jfif" alt="Image" 
+                         style="width: 400px; height: 300px; object-fit: cover; border-radius: 10px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/img/b.jfif" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/img/c.jfif" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Destination Cards -->
+    <div class="container my-3">
+        <h1 class="my-3 text-center">Select Destination</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            
+            <!-- Rome Card -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="/static/img/rome.jfif" class="card-img-top" alt="Rome">
+                    <div class="card-body">
+                        <p class="card-text">Rome, the Eternal City, is a breathtaking blend of ancient history and timeless beauty. It is a city where history lives around every corner, from the Colosseum to the Roman Forum, offering a perfect mix of culture, art, and timeless beauty.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                            </div>
+                            <small class="text-body-secondary">1 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Egypt Card -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="/static/img/egypt.jfif" class="card-img-top" alt="Egypt">
+                    <div class="card-body">
+                        <p class="card-text">Egypt is a land of timeless wonder, where ancient pyramids and majestic temples, weave a captivating story of one of the world's oldest civilizations. It enchants visitors with its ancient temples and iconic pyramids, blending history and beauty in every corner.
+</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                            </div>
+                            <small class="text-body-secondary">1 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Turkey Card -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="/static/img/turkey.jfif" class="card-img-top" alt="Turkey">
+                    <div class="card-body">
+                        <p class="card-text">Turkey is a mesmerizing fusion of East and West, where vibrant bazaars, stunning landscapes, and rich historical sites like Istanbul's Hagia Sophia and Cappadocia's fairy chimneys create a truly unforgettable experience.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                            </div>
+                            <small class="text-body-secondary">1 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Switzerland Card -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="/static/img/switzerland.jfif" class="card-img-top" alt="Switzerland">
+                    <div class="card-body">
+                        <p class="card-text">Switzerland is a picture-perfect paradise, known for its snow-capped Alps, pristine lakes, and charming villages that exude serenity and natural beauty.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                            </div>
+                            <small class="text-body-secondary">1 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paris Card -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="/static/img/paris.jfif" class="card-img-top" alt="Paris">
+                    <div class="card-body">
+                        <p class="card-text">Paris, the City of Light, enchants with its romantic ambiance, iconic landmarks like the Eiffel Tower, and a timeless blend of art, fashion, and culinary delights.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                            </div>
+                            <small class="text-body-secondary">1 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thailand Card -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="/static/img/thailand.jfif" class="card-img-top" alt="Thailand">
+                    <div class="card-body">
+                        <p class="card-text">Thailand is a vibrant haven of golden temples, tropical beaches, flavorful cuisine, and warm hospitality, where tradition and adventure beautifully intertwine.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                            </div>
+                            <small class="text-body-secondary">1 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- row -->
+    </div> <!-- container -->
+</div> <!-- index-container -->
+{% endblock %}

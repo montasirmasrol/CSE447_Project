@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        .profile-card h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-card p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid #74ebd5;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        {% load custom_filters %}
+        <h1>User Profile</h1>
+
+        {% if profile_picture %} -->
+            <!-- Show profile picture with base64 encoding -->
+            <!-- <img src="data:image/png;base64,{{ profile_picture|b64encode }}" alt="Profile Picture">
+        {% else %}
+            <p>No Profile Picture Uploaded</p>
+        {% endif %}
+
+        <p>Email: {{ email }}</p>
+        <p>First Name: {{ first_name }}</p>
+        <p>Last Name: {{ last_name }}</p>
+    </div>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+
+        .profile-card h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-card p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid #74ebd5;
+        }
+
+        .valid {
+            color: green;
+            font-weight: bold;
+        }
+
+        .invalid {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        {% load custom_filters %}
+        <h1>User Profile</h1>
+
+        {% if profile_picture %}
+            <img src="data:image/png;base64,{{ profile_picture|b64encode }}" alt="Profile Picture">
+        {% else %}
+            <p>No Profile Picture Uploaded</p>
+        {% endif %}
+
+        <p>Username: {{ user.username }}</p>
+        <p>
+            <strong>Email:</strong> {{ email }} <br>
+            <strong>Integrity:</strong>
+            {% if email_valid %}
+                <span class="valid">Valid ✅</span>
+            {% else %}
+                <span class="invalid">Invalid ❌</span>
+            {% endif %}
+        </p>
+
+        <p>
+            <strong>First Name:</strong> {{ first_name }} <br>
+            <strong>Integrity:</strong>
+            {% if first_name_valid %}
+                <span class="valid">Valid ✅</span>
+            {% else %}
+                <span class="invalid">Invalid ❌</span>
+            {% endif %}
+        </p>
+
+        <p>
+            <strong>Last Name:</strong> {{ last_name }} <br>
+            <strong>Integrity:</strong>
+            {% if last_name_valid %}
+                <span class="valid">Valid ✅</span>
+            {% else %}
+                <span class="invalid">Invalid ❌</span>
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        background: linear-gradient(135deg, #e0f7ff 0%, #f0fcff 100%); /* soft light blue */
+        font-family: Arial, sans-serif;
+    }
+    .contact-container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.8); /* slightly transparent white for contrast */
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+</style>
+
+<div class="contact-container">
+    <h1 class="text-center my-3">Contact Us</h1>
+    <form method="post" action="/contact">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Write Your Name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">E-Mail</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone No</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="01XXXXXXXXX">
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Describe Your Issue</label>
+            <textarea class="form-control" id="desc" name="desc" rows="4" placeholder="Please provide details of your issue"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
