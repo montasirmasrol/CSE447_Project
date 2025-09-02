@@ -25,3 +25,8 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+# Sensitive files
+encryption_key.key
+
+# Database
+*.sqlite3
